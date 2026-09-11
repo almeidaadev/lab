@@ -55,7 +55,13 @@ async function PdfsPage() {
                     <div className="grid grid-cols-3 gap-4">
                         {pdfs?.map((item) => (
                             <div key={item.id} className="border rounded p-2">
-                                <a href={item.path} target="__blank" className="text-sm underline uppercase text-blue flex justify-center items-center text-white">{item.name}</a>
+                                <a
+                                    href={item.path}
+                                    target="__blank"
+                                    className="text-sm underline uppercase text-blue flex justify-center items-center text-white"
+                                >
+                                    {item.name}
+                                </a>
                             </div>
                         ))}
                     </div>
