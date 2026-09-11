@@ -13,8 +13,8 @@ function TodosPage() {
                     required
                     className="border p-2 rounded text-white"
                 />
-                
-                <input type="file" name="path" accept="image/*" />
+
+                <input type="file" name="path" accept=".pdf, application/pdfs" />
 
                 <input
                     type="date"

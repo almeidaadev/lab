@@ -1,26 +1,9 @@
 import "./App.css";
 import Link from "next/link";
 
-import { supabase } from "@/lib/supabase";
-
 async function HomePage() {
-    const { data: pdfs, error } = await supabase.from("pdfs").select("*");
-
-    if (error) {
-        console.error(error);
-    }
     return (
         <>
-            <div className="container">
-                <h2>PDFs</h2>
-                <ul>
-                    {pdfs?.map((pdf) => (
-                        <li key={pdf.id}>
-                            <strong>{pdf.nome}</strong> — {pdf.path}
-                        </li>
-                    ))}
-                </ul>
-            </div>
             <header className="site-header">
                 <div className="container header-inner">
                     <a href="#" className="brand">
